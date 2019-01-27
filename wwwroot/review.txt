@@ -1,0 +1,32 @@
+intel:Beijin
+intel:Beijin
+UW:Tacoma
+OKOK:OKOK
+OKOK:OKOK
+OKOK:OKOK
+OKOK:OKOK
+OKOK:OKOK
+
+UW Tacoma:1717 Market: It's OK.
+:on:on:on:on
+UW Tacoma:1717 Market: It's OK.
+:water:air:waste:other
+UW:Seattle: It's Good.
+:air:land:other
+UW:Seattle: It's Good.
+:air:land:other
+iiii:vvvv: Type your reviews here.bbbbbb
+:water:waste:living:other
+iiii:vvvv: Type your reviews here.bbbbbb
+:water:waste:living:other
+rrr:bbb: Type your reviews here.nnn
+:water:waste:living
+rrr:bbb: Type your reviews here.nnn
+:water:waste:living
+ccc:vvv: Type your reviews here.www
+:water:waste:other
+ccc:vvv: Type your reviews here.www
+:water:waste:other
+ddd:fff: Type your reviews here.
+:water:land:other
+:/var/tmp/phpNIKbnn:/var/tmp/phpNIKbnn

@@ -1,0 +1,122 @@
+/*.BigTable {
+	border: solid;
+	border-width: 1px;
+	padding-top: 5px;
+	margin-top: 20px;
+	border-color: gray;
+	border-radius: 15px;
+}*/
+
+#title {
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+#form {
+	margin-left: 4%;
+	margin-right:2%;
+}
+
+#WaterType {
+	/*padding-left: 15px;*/
+	margin-left: 10px;
+	width: 300px;
+}
+
+#Visibility {
+	/*padding-left: 15px;*/
+	margin-left: 10px;
+	width: 300px;
+}
+
+#WasteType {
+	/*padding-left: 15px;*/
+	margin-left: 10px;
+	width: 300px;
+}
+
+
+
+#Type {
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-bottom: 40px;
+}
+
+#rightHead {
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+/*.Turb {
+	margin-top:12px;
+	margin-left: 20px;
+}*/
+
+#WaterColor {
+	/*padding-left: 15px;*/
+	margin-left: 6px;
+	width: 300px;
+}
+
+/*#Turbidity {
+	width: 300px;
+}*/
+
+#turbScore {
+	margin-top:5px;
+	margin-left: 20px;
+}
+
+/*button:hover {
+	color: white;
+}*/
+.selected {
+	background-color: red;
+}
+.radios {
+	margin-left: 10%;
+}
+
+#FloatType {
+	margin-left: 50px;
+	width:300px;
+}
+
+#SmokeColor {
+	margin-left: 50px;
+	width:300px;
+}
+#Symptom {
+	margin-left: 50px;
+	width:300px;
+}
+#explain {
+	margin-left: 50px;
+	width:300px;
+}
+
+#WasteAmount {
+	margin-left: 50px;
+	width: 300px;
+}
+
+#params {
+	width: 90%;
+	margin-left: 20px;
+}
+.box {
+	width: 110%;
+	height:110%;
+}
+
+#comment {
+	margin-left:40px;
+	width: 380px;
+	height: 200px;
+}
+
+/*.square {
+	width:10px;
+	background-color: green;
+}*/

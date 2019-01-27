@@ -1,0 +1,57 @@
+<?php
+				  /*
+				  $reviews=$con->query("select * from review where id= $last_id ");
+				  foreach($reviews as $review)
+				  {
+					  $r_company=$review[1];
+					  $r_address=$review[2];
+					  $r_city=$review[3];
+					  
+					 				  
+				  }	*/
+				  ?>
+
+//alert(json.p_info[i].company);
+				//document.getElementById("img").innerHTML="<img height="190" width="190" src="data:image;base64,'.json.all_image[i].'">";
+				//document.getElementById('img').setAttribute( 'src', 'data:image;base64,'.json.all_image[i].' );
+
+
+var div = document.createElement("div");
+				div.innerHTML="Company:"+json.p_info[i].company+ "</br>Address: "+json.p_info[i].address;
+				list.appendChild(div);
+				
+				for (var j = 0; j < json.p_image[j].length; j++) {
+					var image_div = document.createElement("div");
+					image_div.innerHTML=json.all[i].p_image[j];;
+					list.appendChild(image_div);
+				}
+
+document.getElementById("img").setAttribute("src", "data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub/
+/ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcpp
+V0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7");
+
+
+document.getElementById("myAnchor").setAttribute("href", "http://www.w3schools.com");	
+			var rawImageData = "R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7";
+			//document.getElementById("img2").setAttribute("src", "data:image/jpg;base64,"+json.p_image[1]);
+			
+
+			document.getElementById("img").setAttribute("src", "data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub//ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcppV0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7");
+
+
+<a id="myAnchor">A Link: Go to w3schools.com</a>
+                  <img id="img">
+                  <img id="img2" width="160" height="140">
+                  <img src="data:image/gif;base64,R0lGODlhEAAOALMAAOazToeHh0tLS/7LZv/0jvb29t/f3//Ub/
+/ge8WSLf/rhf/3kdbW1mxsbP//mf///yH5BAAAAAAALAAAAAAQAA4AAARe8L1Ekyky67QZ1hLnjM5UUde0ECwLJoExKcpp
+V0aCcGCmTIHEIUEqjgaORCMxIC6e0CcguWw6aFjsVMkkIr7g77ZKPJjPZqIyd7sJAgVGoEGv2xsBxqNgYPj/gAwXEQA7" 
+width="16" height="14" alt="embedded folder icon">
+
+
+
+
+//alert(this.data.lng+" "+ this.data.lat);
+		//var point = new BMap.Point(this.data.lng, this.data.lat);
+		//map.centerAndZoom(point, 15);
+		//var marker = new BMap.Marker(new BMap.Point(this.data.lng, this.data.lat)); // ???
+		//map.addOverlay(marker);  

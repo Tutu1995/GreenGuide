@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	#submits {
+  		float: right; 
+  		margin-right: 50%;
+  	}
+  	.radios {
+  		margin-left: 1%;
+  	}
+  </style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <h2>Write Environmental Report</h2>
+  <p>Sharing the environmental information with communities.</p>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Water Issue</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+           <div>
+        	<p>Type</p>
+        	  <select class="form-control">
+        	  	<option>Please select water type</option>
+  			       <option>Lake</option>
+                <option>Sea</option>
+                <option>River</option>
+              </select>
+            </div>
+             <p></p>
+             <p>Color</p>
+        	  <select class="form-control">
+        	  	<option>Please Select water color</option>
+  			        <option>Green</option>
+                <option>Blue</option>
+                <option>Brown</option>
+                <option>Black</option>
+                <option>Yellow</option>
+                <option>Red</option> 
+              </select>
+             <p></p>
+             <p>Turbidity (0 = clear, 10 = Turbid)</p>
+              <select class="form-control" >
+              	<option>(Select)</option>
+  			        <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option> 
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+             <p></p>
+             <p>
+               Odor:
+               <span class="radios"> 
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> No Smell
+                </label>
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Aware Smell
+                </label> 
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Strong Smell
+                </label>
+               </span>
+              </p> 
+             <p></p>
+             <p>
+               Any floats? 
+               <span class="radios">   
+             	<label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+                </label>
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+                </label>
+               </span> 
+             </p>
+             <input type="text" class="form-control" placeholder="Tell me about the floats if it exists.">
+             <p></p>
+             <input id="submits" class="btn btn-default" type="submit" value="Submit">
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Air Issue</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+        	<div>
+        	Visibility
+        	    <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">< 0.5 km
+                </label>
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">0.5 - 2 km
+                </label> 
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">2 - 10 km
+                </label>
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">> 10 km
+                </label>
+            </div>
+             <p></p>
+             <p>Color</p>
+        	  <select class="form-control">
+        	  	<option>Please Select Smoke color</option>
+  			    <option>Green</option>
+                <option>Blue</option>
+                <option>Brown</option>
+                <option>Black</option>
+                <option>Yellow</option>
+                <option>Red</option> 
+              </select>
+             <p></p>
+             <p>Odor</p>
+             <input type="text" class="form-control" placeholder="What is the odor?">
+             <p></p>
+             <p>
+             	Uncomfortable?
+             	<label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+                </label>
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+                </label> 
+             </p>
+              <select class="form-control">
+             	<option>(Select)</option>
+  			    <option>Cough</option>
+                <option>Difficult Breathing</option>
+                <option>Eyes Pain</option>
+                <option>Other(Please explain below)</option>
+               </select>
+              <p></p>  
+             <input type="text" class="form-control" placeholder="Tell me about your feeling">
+             <p></p>
+             <input id="submits" class="btn btn-default" type="submit" value="Submit">
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Solid Issue</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+        	Pollutants Type
+        	<select class="form-control">
+        	  	<option>(Select)</option>
+  			    <option>Industry Pollutants</option>
+                <option>Agricultural Pollutants</option> 
+                <option>Domestic Pollutants</option>
+            </select>
+
+             <p></p>
+             <p>Pollutants Amount (0 = Just a few pollutants, 10 = Plenty of pollutants)</p>
+              <select class="form-control" >
+              	<option>(Select)</option>
+  			    <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option> 
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+              <p></p>
+              <p>
+               Odor:
+               <span class="radios"> 
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> No Smell
+                </label>
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Aware Smell
+                </label> 
+                <label class="radio-inline">
+                   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Strong Smell
+                </label>
+               </span>
+              </p> 
+              <p></p>
+              <input id="submits" class="btn btn-default" type="submit" value="Submit">
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+    
+</body>
+</html>

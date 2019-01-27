@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Support Landing Page</title>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://d3js.org/d3.v3.min.js"></script>
+		  <script src="https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		  <style>
+				.img_container {
+				    position: relative;
+				    //text-align: center;
+				    color: white;
+				}
+
+				.centered {
+				    position: absolute;
+				    top: 10%;
+				    //left: 5%;
+				}
+
+				.square_style {
+					margin-top: 20px;
+				    border-top: 1px solid #eee;
+				}
+
+				.order_class {
+					display: inline-block;
+				}
+		  </style>
+	</head>
+	<body>
+		<div class="container-fluid">
+
+			<div class="page-header">
+			  <h1 class="text-primary">OneBranch Cloud Delivery Pipeline</h1>
+			</div>
+
+			<div class="row">
+				    <div class="col-sm-6">
+				    	<img src="support.png" class="img-rounded" width="100%" height="200">
+				    </div>
+				    <div class="col-sm-6">
+					    	<h2 style="color: Orange;">Think about a question and answer it!</h2>
+					    	<h2 style="color: Orange;">then we will give you a solution!</h2>
+					</div>			  
+			</div>
+
+			<div class="page-header" style="margin-top: 13px;">
+			</div>
+
+		<!--
+			<div class="img_container">
+			  <img src="blue.jpeg" width="100%" height="150" class="img-rounded">
+			  <h2 class="centered">Think about a question and answer it, then we will give you a solution!</h2>
+			</div>
+		-->
+
+			<div class="row">
+			    <div class="col-sm-2"></div>
+			    <div id="order_container" class="col-sm-8">
+			    	
+			    </div>
+			    <div class="col-sm-2"></div>
+			</div>
+
+			<div class="row">
+			    <div class="col-sm-2"></div>
+			    <div id="box_container" class="col-sm-8">
+			    	<div>
+				    	<h3>Is your team repository on OneBranch? (OneBranch repos are at <a href="https://msazure.visualstudio.com/One/" target="_blank">https://msazure.visualstudio.com/One/</a>)</h3>
+						<button type="button" class="btn btn-default btn-lg" id="yes">Yes</button>
+						<button type="button" class="btn btn-default btn-lg" id="no">No</button>
+					</div>
+			    </div>
+			    <div class="col-sm-2"></div>
+			</div>
+
+			<div class="page-header" style="margin-top: 30px;">
+
+			</div>
+
+			<div class="row">
+			    <div class="col-sm-2"></div>
+			    <div class="col-sm-8">
+			    		<h3>Top 10 topics</h3>
+						<h3 class="text-primary">Click the word to see the topic page!</h3>
+			    </div>
+			    <div class="col-sm-2"></div>
+			</div>
+		</div>
+		
+
+	</body>
+
+	<script type="text/javascript">
+		//var order = [];
+		window.onload= function(){
+			document.getElementById("yes").onclick=show;
+			document.getElementById("no").onclick=show;
+			//document.getElementById("no").onclick=noTip;
+			//document.getElementById("code").onclick=codeTip;
+		};
+
+		function show(){
+
+		var but_but = [
+			["Yes", "Code (e.g., Pull Requests, Branches, Commit,…)",0],
+			["Yes", "Work (TFS)",0],
+			["Yes", "Build",0],
+			["Yes", "Test",0],
+			["Yes", "Release",0],
+			["Yes", "Wiki",0],
+			["Yes", "Compliance",0],
+			["No", " ",0],
+			["Build",'Classic <a href="http://wabt/buildtracker" target="_blank">http://wabt/buildtracker</a>',1],
+			["Build",'CDP <a href="http://aka.ms/cdp" target="_blank">http://aka.ms/cdp</a>',1],
+			["Build",'CDPx <a href="http://aka.ms/cdpx" target="_blank">http://aka.ms/cdpx</a>',1],
+			['Classic <a href="http://wabt/buildtracker" target="_blank">http://wabt/buildtracker</a>',"Topic 1 - New signing ESRP",2],
+			['Classic <a href="http://wabt/buildtracker" target="_blank">http://wabt/buildtracker</a>',"Topic 2 - Buildreq",2],
+			['Classic <a href="http://wabt/buildtracker" target="_blank">http://wabt/buildtracker</a>',"Topic 3 - Order build for signing",2],
+			['Classic <a href="http://wabt/buildtracker" target="_blank">http://wabt/buildtracker</a>',"Topic 4 - dirs.proj format",2],
+			['Classic <a href="http://wabt/buildtracker" target="_blank">http://wabt/buildtracker</a>',"Topic 5 - Nuget packages",2],
+			['Classic <a href="http://wabt/buildtracker" target="_blank">http://wabt/buildtracker</a>',"Other",2],
+			['CDP <a href="http://aka.ms/cdp" target="_blank">http://aka.ms/cdp</a>','<a href="http://aka.ms/cdp" target="_blank">http://aka.ms/cdp</a>',2],
+			['CDPx <a href="http://aka.ms/cdpx" target="_blank">http://aka.ms/cdpx</a>','<a href="http://aka.ms/cdpx" target="_blank">http://aka.ms/cdpx</a>',2],
+			["Release",'<a href="http://aka.ms/warm" target="_blank">http://aka.ms/warm</a>',2],
+			["Topic 1 - New signing ESRP","Support alias",3],
+			["Topic 2 - Buildreq","Support alias",3],
+			["Topic 3 - Order build for signing","Support alias",3],
+			["Topic 4 - dirs.proj format","Support alias",3],
+			["Topic 5 - Nuget packages","Support alias",3],
+			["Other","Support alias",3],
+			["Search our wiki at… (from S2), SO for the area","Support alias",4],
+			["Support alias","Yes, the topic answered my questions",4],
+			["Support alias","No, the topic didn't answer my questions",4],
+			["Yes, the topic answered my questions"," ", 5],
+			["No, the topic didn't answer my questions"," ", 5]
+
+
+		];
+
+		var but_des = [
+			["Yes", "What is the issue you are having?"],
+			["No", "The End! Thank you for using Pactera Support Landing page!"],
+			["Build","What type of Build are you using?"],
+			['Classic <a href="http://wabt/buildtracker" target="_blank">http://wabt/buildtracker</a>',"Here are the most common issues with _____________	"],
+			['CDP <a href="http://aka.ms/cdp" target="_blank">http://aka.ms/cdp</a>',"Here are the most common issues with _____________	"],
+			['CDPx <a href="http://aka.ms/cdpx" target="_blank">http://aka.ms/cdpx</a>',"Here are the most common issues with _____________	"],
+			["Release","Here are the most common issues with _____________				"],
+			["Topic 1 - New signing ESRP",'New signing ESRP solution page is <a href="https://msazure.visualstudio.com/OneBranch/_wiki?pagePath=%2FCodesign%2FESRP-Signing-with-Azure-Certs" target="_blank">here!</a>'],
+			["Topic 2 - Buildreq",'Buildreq solution page is <a href="https://microsoft.sharepoint.com/teams/WAG/EngSys/Implement/OneBranch/Buildreq.aspx" target="_blank">here!</a>'],
+			["Topic 3 - Order build for signing",'Order build for signing solution page is <a href="https://msazure.visualstudio.com/OneBranch/_wiki?pagePath=%2FCodesign%2FHow-to-order-your-build-for-Signing" target="_blank">here!</a>'],
+			["Topic 4 - dirs.proj format",'dirs.proj format solution page is <a href="https://microsoft.sharepoint.com/teams/WAG/EngSys/Implement/OneBranch/Required%20dirs.proj%20Format.aspx" target="_blank">here!</a>'],
+			["Topic 5 - Nuget packages",'Nuget packages solution page is <a href="https://microsoft.sharepoint.com/teams/WAG/EngSys/Implement/OneBranch/Using%20NuGet.aspx" target="_blank">here!</a>'],
+			["Other","Search our wiki at… (from S2), SO for the area"],
+			["Support alias","Support alias is...</h3><h3>Did the topic answer your question?"],
+			["Yes, the topic answered my questions","The End! Thank you for using Pactera Support Landing page!"],
+			["No, the topic didn't answer my questions","v1: Display email support alias and the required fields (repo name, branch)</h3><h3>v2: email form with email support alias and required fields pre-populated"]
+
+		];
+
+			
+		var show_order= document.getElementById("order_container");
+	    var show_order_all= show_order.getElementsByTagName("h3");
+	    var all_length = show_order_all.length-1;
+	    var position=0;
+
+
+
+	    //alert("L"+all_length);
+	    for(var i=0; i< but_but.length; i++){
+			
+			if(this.innerHTML==but_but[i][0])
+			{
+				position=but_but[i][2];
+				//alert("L"+all_length);
+				//alert("p"+position);
+				break;
+			}
+			
+		}
+
+		for(var p = all_length; p>=position; p--)
+		{
+			//alert("[p]"+p);
+			show_order.removeChild(show_order_all[p]);
+		}
+
+    	var right = document.createElement("span"); 
+        right.className="glyphicon glyphicon-chevron-right";
+        var order = document.createElement("h3"); 
+    	order.innerHTML=this.innerHTML;
+    	order.className = "order_class text-primary";
+
+    	if(this.innerHTML=="Yes, the topic answered my questions" || this.innerHTML=="No, the topic didn't answer my questions"){
+    		show_order.appendChild(order);
+	    }else{
+	    	order.appendChild(right);
+	    	show_order.appendChild(order);
+	    }
+	  
+
+/*
+			for(var i=0; i< but_but.length; i++){
+				
+				if(this.innerHTML==but_but[i][0])
+				{
+					var position=but_but[i][2];
+					for(var p = position; p<order.length; p++){
+						order.pop();
+					}
+				}
+				
+			}
+
+			cur_node = this;
+		    order.push(cur_node);
+
+		   
+
+		    order_str="";
+		    for(var j=0; j<order.length; j++){
+		    	order_str+=order[j].innerHTML + ">";
+		    }
+
+		    var show_order= document.getElementById("order_container");
+		    show_order.innerHTML="";
+		    show_order.innerHTML=order_str;
+*/
+
+
+			var result = [];
+		    node = this.parentNode.nextSibling;
+
+			while( node  ) {
+			    result.push( node );
+			    node = node.nextSibling;
+			}
+			//alert(result.length);
+			for(var i =0; i<result.length; i++){
+				this.parentNode.parentNode.removeChild(result[i]);
+			}
+
+			var square = document.createElement("div");
+			square.className="square_style";
+
+			//alert(but_des[1][0]);
+
+			//alert(but_des.length);
+			
+			for(var i=0; i< but_des.length; i++){
+				
+				if(this.innerHTML==but_des[i][0])
+				{
+					var y_q = document.createElement("h3");
+					y_q.innerHTML=but_des[i][1];
+					square.appendChild(y_q);
+
+				}
+			}
+
+			for(var i=0; i< but_but.length; i++){
+				
+				if(this.innerHTML==but_but[i][0] && but_but[i][1]!=" ")
+				{
+					var but_child = document.createElement("button");
+					but_child.innerHTML=but_but[i][1];
+					but_child.className="btn btn-default btn-lg";
+					but_child.onclick=show;
+					square.appendChild(but_child);
+				}
+				
+			}
+
+			var box_container=document.getElementById("box_container");
+			box_container.appendChild(square);
+			
+
+		}
+
+
+	var fill = d3.scale.category20();
+	var words = [
+				 {"text":"Permission", "url":"https://stackoverflow.microsoft.com/questions/9833/how-to-get-access-to-a-repo-on-msazure-visualstudio-com-i-am-a-new-fte-intern-i/9843", "size": 99},
+	             {"text":"ESRP onboarding", "url":"https://stackoverflow.microsoft.com/questions/40943/how-to-troubleshoot-permissions-to-access-onebranch/40973", "size": 89},
+	             {"text":"Codesign", "url":"https://msazure.visualstudio.com/OneBranch/_wiki?pagePath=%2FCodesign%2FHow-to-order-your-build-for-Signing", "size": 79},
+	             {"text":"Requesting builds", "url":"https://microsoft.sharepoint.com/teams/WAG/EngSys/Implement/OneBranch/Buildreq.aspx", "size": 69},
+	             {"text":"Build order", "url":"https://microsoft.sharepoint.com/teams/WAG/EngSys/Implement/OneBranch/Required%20dirs.proj%20Format.aspx", "size": 59},
+
+	             {"text":"Retrieve build", "url":"https://microsoft.sharepoint.com/teams/WAG/EngSys/Implement/OneBranch/Retrieve%20Build%20from%20CloudVault.aspx", "size": 49},
+	             {"text":"Mirror Nuget packages", "url":"https://microsoft.sharepoint.com/teams/WAG/EngSys/Implement/OneBranch/Mirroring%20packages%20from%20external%20feeds.aspx", "size": 39},
+	             {"text":"Nuget stores", "url":"https://microsoft.sharepoint.com/teams/WAG/EngSys/Implement/OneBranch/Package%20Stores.aspx", "size": 32},
+	             {"text":"Delete repository", "url":"https://msazure.visualstudio.com/OneBranch/_wiki?pagePath=%2FDeleteRepository", "size": 26},
+	             {"text":"Create repository", "url":"https://microsoft.sharepoint.com/teams/WAG/EngSys/Implement/OneBranch/Create%20Repository.aspx", "size": 20},
+
+	            ]
+	var width = 1400;
+	var height = 900;
+	
+	/*
+	for (var i = 0; i < words.length; i++) {
+	 words[i].size = 10 + Math.random() * 90;
+	}
+	*/
+/*
+	for (var i = 0; i < words.length; i++) {
+	 words[i].size = 10 + words[i].size * 90;
+	}
+*/	
+
+	d3.layout.cloud()
+	  .size([width, height])
+	  .words(words)
+	  //.padding(5)
+	  .padding(1)
+	  .rotate(function() { return ~~ (Math.random() * 2) * 90; })
+	  .font("Impact")
+	  .fontSize(function(d) { return d.size;})
+	  .on("end", draw)
+	  .start();
+
+	function draw(words) {
+	    //d3.select("body")
+	    d3.select("body")
+	      .append("svg")
+	      .attr("width", width)
+	      .attr("height", height)
+	      .append("g")
+	      .attr("transform", "translate("+ width/2 +","+ height/2 +")")
+	      .selectAll("text")
+	      .data(words)
+	      .enter()
+	      .append("text")
+	      .style("font-size", function(d) { return d.size + "px"; })
+	      .style("font-family", "Impact")
+	      .style("fill", function(d, i) { return fill(i); })
+	      .attr("text-anchor", "middle")
+	      .attr("transform", function(d) {
+	          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"; 
+	      })
+	      .text(function(d) { return d.text; })
+	      .on("click", function (d, i){
+	          window.open(d.url, "_blank");
+	      });
+	}
+		
+	</script>
+</html>

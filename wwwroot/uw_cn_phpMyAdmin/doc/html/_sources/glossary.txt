@@ -1,0 +1,51 @@
+.. _glossary:
+
+Glossary
+========
+
+From Wikipedia, the free encyclopedia
+
+.. glossary::
+
+    .htaccess
+      the default name of Apache's directory-level configuration file.	
+
+      .. seealso:: <http://www.wikipedia.org/wiki/.htaccess>
+
+    ACL
+      Access Contol List
+
+    Blowfish
+      a keyed, symmetric block cipher, designed in 1993 by Bruce Schneier.	
+
+      .. seealso:: <http://www.wikipedia.org/wiki/Blowfish_(cipher)>
+
+    Browser
+      a software application that enables a user to display and interact with text, images, and other information typically located on a web page at a website on the World Wide Web.	
+
+      .. seealso:: <http://en.wikipedia.org/wiki/Web_browser>
+
+    bzip2
+      a free software/open source data compression algorithm and program developed by Julian Seward.	
+
+      .. seealso:: <http://www.wikipedia.org/wiki/Bzip2>
+
+    CGI
+      Common Gateway Interface is an important World Wide Web technology that
+      enables a client web browser to request data from a program executed on
+      the Web server.	
+
+      .. seealso:: <http://www.wikipedia.org/wiki/CGI>
+
+    Changelog
+      a log or record of changes made to a project.	
+
+      .. seealso:: <http://www.wikipedia.org/wiki/Changelog>
+
+    Client
+      a computer system that accesses a (remote) service on another computer by some kind of network.	
+
+      .. seealso:: <http://www.wikipedia.org/wiki/Client_(computing)>
+
+    column
+      a set of data values o

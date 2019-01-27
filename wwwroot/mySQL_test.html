@@ -1,0 +1,16 @@
+<?php
+// Create connection : Update the hostname , username , password 
+//, database name. 
+//Linux VM would be  linuxmysqlsrv.cloudapp.net:3307
+$con=mysqli_connect("yiruli.cloudapp.net:3307","yiruli","Uw1364228",
+"green");
+
+// Check connection
+if (mysqli_connect_errno()) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+else
+{
+    echo "Connection with MySQL database was successful";
+}
+?>

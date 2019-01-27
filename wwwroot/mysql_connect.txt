@@ -1,0 +1,5 @@
+Database=G_MySQL;Data Source=us-cdbr-azure-west-b.cleardb.com;User Id=b67969f431fe01;Password=60b31d82
+
+Database=mygreen;Data Source=us-cdbr-azure-west-b.cleardb.com;User Id=b6961e47d29df6;Password=302a1307
+
+Database=myGreenGuide;Data Source=us-cdbr-azure-west-b.cleardb.com;User Id=b4f6ad8be99b99;Password=0ba0581c
